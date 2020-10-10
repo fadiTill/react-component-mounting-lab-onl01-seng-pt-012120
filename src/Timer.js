@@ -7,6 +7,24 @@ class Timer extends Component {
   };
 
   // add your code here
+  
+
+  // this.interval = setInterval(...)
+  // var myVar = setInterval(myTimer, 1000);
+  // componentDidMount() {
+    //   this.interval = setInterval(this.fetchWeather, 15000);
+    // }
+
+
+    componentDidMount() {
+         this.interval = setInterval(this.clockTick, 1000);
+       }
+    
+
+       componentWillUnmount() {
+        clearInterval(this.interval);
+      }
+  
 
   render() {
     const { time, color } = this.state;
